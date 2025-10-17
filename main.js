@@ -50,7 +50,7 @@ const productHot = document.getElementById('product-hot');
 const productLaptop = document.getElementById('product-laptop');
 const productDienThoai = document.getElementById('product-dienthoai');
 if (productHot) {
-    fetch('http://localhost:3000/products')
+    fetch('https://my-json-server.typicode.com/phatletran3321-rgb/fronend//products')
         .then(response => response.json())
         .then(data => {
             const dataHot = data.filter(p => p.hot == true);
@@ -70,7 +70,7 @@ const sortPrice = document.getElementById('sort-price');
 let allProductsData = [];
 
 if (productAll) {
-    fetch('http://localhost:3000/products')
+    fetch('https://my-json-server.typicode.com/phatletran3321-rgb/fronend//products')
         .then(response => response.json())
         .then(data => {
             renderProduct(data, productAll);
@@ -139,7 +139,7 @@ if (productDetailDiv) {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
     if (id) {
-        fetch(`http://localhost:3000/products/${id}`)
+        fetch(`https://my-json-server.typicode.com/phatletran3321-rgb/fronend//products/${id}`)
             .then(response => response.json())
             .then(data => {
                 const product = new Product(
@@ -246,7 +246,7 @@ document.addEventListener('click', function (e) {
     if (addBtn) {
         const productId = addBtn.getAttribute('productId');
        let quantity = 1;
-        fetch(`http://localhost:3000/products/${productId}`)
+        fetch(`https://my-json-server.typicode.com/phatletran3321-rgb/fronend//products/${productId}`)
             .then(response => response.json())
             .then(item => {
                 const product = new Product(
