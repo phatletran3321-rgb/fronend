@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tran Phat Store</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Banner slideshow -->
+  <section class="banner">
+    <img src="img/banner.jpg" alt="Khuyến mãi" />
+    <img src="img/banner3.jpg" alt="Khuyến mãi" />
+  </section>
+
+  <!-- Container chính -->
+  <div class="container">
+    <div class="sort-box">
+      <select id="sort-price">
+        <option value="">Sắp xếp theo giá</option>
+        <option value="asc">Giá tăng dần</option>
+        <option value="desc">Giá giảm dần</option>
+      </select>
+    </div>
+
+    <h1>Sản phẩm nổi bật</h1>
+    <div id="product-hot" class="products"></div>
+
+    <h1>Sản phẩm laptop</h1>
+    <div id="product-laptop" class="products"></div>
+
+    <h1>Sản phẩm điện thoại</h1>
+    <div id="product-dienthoai" class="products"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
